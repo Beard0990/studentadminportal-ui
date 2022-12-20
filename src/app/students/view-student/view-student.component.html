@@ -1,11 +1,11 @@
 <div class="page-header">
   <div class="container">
-    <h1>Edit Student Information</h1>
+    <h1>{{header}}</h1>
   </div>
 </div>
 
 <div class="container">
-  <div class="row top-row" style="margin-top: 12px">
+  <div class="row top-row">
     <div class="col-xs-12 row end-xs">
       <a routerLink="/students" color="primary" mat-raised-button>
         <mat-icon>chevron_left</mat-icon>
@@ -93,7 +93,31 @@
             </mat-form-field>
           </div>
         </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row between-xs" *ngIf="!isNewStudent">
+              <button mat-raised-button color="primary" (click)="onUpdate()">Save</button>
+              <button mat-raised-button color="warn" (click)="onDelete()">Delete</button>
+            </div>
+            <div class="row between-xs" *ngIf="isNewStudent">
+              <button mat-raised-button color="primary" (click)="onAdd()">Add</button>
+            </div>
+          </div>
+        </div>
       </form>
+    </div>
+    <div class="col-xs-6">
+      <div class="row center-xs">
+        <div class="image-container">
+          <img [src]="displayProfileImageUrl" alt="Profile Image">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 row center-xs mt-1" *ngIf="!isNewStudent">
+          <input hidden type="file" #imageUpload (change)="uploadImage($event)">
+          <button mat-raised-button color="primary" (click)="imageUpload.click()">Change Image</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
