@@ -52,6 +52,7 @@ import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ViewStudentComponent } from './students/view-student/view-student.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { ViewStudentComponent } from './students/view-student/view-student.compo
     AppComponent,
     TopNavComponent,
     StudentsComponent,
-    ViewStudentComponent
+    ViewStudentComponent,
+    LoginComponent
   ],
   imports: [
     FormsModule,

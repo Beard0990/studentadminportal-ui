@@ -1,0 +1,59 @@
+<div class="page-header">
+    <div class="container">
+      <h1>Login</h1>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row top-row">
+    <div class="col-xs-12 row end-xs">
+      <a routerLink="/students" color="primary" mat-raised-button>
+        <mat-icon>chevron_left</mat-icon>
+        Go Back
+      </a>
+    </div>
+  </div>  
+
+  <div class="row">
+    <div class="col-xs-6">
+      <form  #LoginForm="ngForm">
+
+        <div class="row">
+          <div class="col-xs-6">
+            <mat-form-field appearance="fill">
+              <mat-label>Username</mat-label>
+              <input type="text" matInput required>
+              <mat-error>Username is required</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6">
+            <mat-form-field appearance="fill">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput required>
+              <mat-error>Password is required</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+            
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+            
+        
+        <div class="row-xs-3">
+          <div class="col-xs-12">
+            <button mat-raised-button color="primary" (click)="onLogin()">Login</button>
+            
+           <div>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  

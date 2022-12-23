@@ -98,7 +98,7 @@ export class ViewStudentComponent implements OnInit {
             });
           },
           (errorResponse) => {
-            // Log it
+
             console.log(errorResponse);
           }
         );
@@ -118,7 +118,7 @@ export class ViewStudentComponent implements OnInit {
           }, 2000);
         },
         (errorResponse) => {
-          // Log
+
         }
       );
   }
